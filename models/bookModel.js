@@ -2,15 +2,16 @@ const mongoose = require("mongoose");
 
 const bookSchema = new mongoose.Schema({
     title: {
-        type: String, // Use 'type' to specify the data type
+        type: String, 
         required: true,
+        unique : true,
     },
     author: {
         type: String,
         required: true,
     },
     price: {
-        type: Number, // For price, it's better to use Number instead of Float
+        type: Number, 
         required: true
     },
     publication_year: {
@@ -21,4 +22,4 @@ const bookSchema = new mongoose.Schema({
     timestamps: true
 });
 
-module.exports = mongoose.model("Book", bookSchema); // Corrected exports and added schema
+module.exports = mongoose.model("Book", bookSchema);
