@@ -79,7 +79,7 @@ app.get("/logout", (req, res) => {
   });
 });
 
-app.use("/api/book",isAuthenticated, bookrouter);
+app.use("/api/book", bookrouter);
 
 const PORT = process.env.PORT;
 
